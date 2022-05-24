@@ -3,19 +3,20 @@ import { Carousel, Image } from "antd";
 import vay1 from "./vay5.jpg";
 import vay2 from "./vay2.jpg";
 import vay3 from "./vay3.jpg";
-import { DoubleRightOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { DoubleRightOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 import "antd/dist/antd.min.css";
+import { Link, Redirect } from "react-router-dom";
 
 const HomePage = (props) => {
-    const contentStyle = {
-        height: "250px",
-        color: "#fff",
-        lineHeight: "250px",
-        textAlign: "center",
-        background: "#364d79",
-        marginTop: "20dp",
-      };
+  const contentStyle = {
+    height: "250px",
+    color: "#fff",
+    lineHeight: "250px",
+    textAlign: "center",
+    background: "#364d79",
+    marginTop: "20dp",
+  };
   return (
     <div>
       <header className="App-header">
@@ -49,14 +50,16 @@ const HomePage = (props) => {
         <h3 style={{ color: "#0B4C5F" }}>
           <DoubleRightOutlined /> Nhận kết quả hồ sơ nhanh chóng
         </h3>
-        <Button
-          type="primary"
-          size="large"
-          shape="round"
-          style={{ color: "black", fontSize: "20px", textAlign: "center" }}
-        >
-          Bắt đầu vay
-        </Button>
+        <Link to={"./phone-number"}>
+          <Button
+            type="primary"
+            size="large"
+            shape="round"
+            style={{ color: "black", fontSize: "20px", textAlign: "center" }}
+          >
+            Bắt đầu vay
+          </Button>
+        </Link>
       </body>
     </div>
   );
