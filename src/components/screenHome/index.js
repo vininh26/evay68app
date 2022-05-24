@@ -6,7 +6,7 @@ import vay3 from "./vay3.jpg";
 import { DoubleRightOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import "antd/dist/antd.min.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomePage = (props) => {
   const contentStyle = {

@@ -1,29 +1,22 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import HomePage from "./components/home/index";
+import "./App.css";
+import HomePage from "./components/screenHome/index";
 import PhoneNumber from "./components/phonnumber/index";
 import PhonePassPage from "./components/phonnumber/phonepass";
+import Login from "./components/login/Login"
+import Home from "./components/home/Home"
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" caseSensitive={false} element={<HomePage />} />
-          <Route
-            path="/phone-number"
-            caseSensitive={false}
-            element={<PhoneNumber />}
-          />
-          <Route
-            path="/phone-pass"
-            caseSensitive={false}
-            element={<PhonePassPage />}
-          />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/phone-number" element={<PhoneNumber />} />
+        <Route path="/phone-pass" element={<PhonePassPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Home />} />
+      </Routes>
     </div>
   );
 }

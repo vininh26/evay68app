@@ -1,11 +1,11 @@
-import { DoubleRightOutlined, LeftOutlined } from "@ant-design/icons";
+import { LeftOutlined } from "@ant-design/icons";
 import { Button, Form, Image, Input } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
+
 import sd from "./sd.jpg";
 
-const PhoneNumber = () => {
-
+const Login = () => {
   const contentStyle = {
     height: "50px",
     color: "#fff",
@@ -14,13 +14,7 @@ const PhoneNumber = () => {
     background: "#364d79",
     marginTop: "20dp",
   };
-  function edit() {
-    <Link to={"./"}></Link>;
-  }
 
-  const onFinish = (values) => {
-    console.log(values);
-  };
   const layout = {
     labelCol: {
       span: 8,
@@ -28,6 +22,9 @@ const PhoneNumber = () => {
     wrapperCol: {
       span: 8,
     },
+  };
+  const onFinish = (values) => {
+    console.log(values);
   };
 
   return (
@@ -42,26 +39,28 @@ const PhoneNumber = () => {
                 right: "900px",
                 top: "20px",
               }}
-              onChange={edit}
             />
-            Đăng ký
+            Đăng nhập
           </h3>
         </div>
       </header>
       <body>
         <Image preview={false} width={100} height={100} src={sd} />
-        <h3>Nhập số điện thoại để tiến hành đăng kí</h3>
+        <div style={{ paddingTop: "50px" }} />
         <Form {...layout} name="nest-messages" onFinish={onFinish}>
-          <Form.Item name="phone" label="+84">
-            <Input
-              style={{
-                width: "100%",
-              }}
-            />
+          <Form.Item name="phone" label="Số điện thoại">
+            <Input placeholder="Nhập số điện thoại" />
           </Form.Item>
-          <Link to={"/phone-pass"}>
-            <Button type="link" htmlType="submit">
-              Bước tiếp theo <DoubleRightOutlined />
+          <Form.Item name="passworld" label="Mật khẩu">
+            <Input placeholder="Nhập passworld" type={"password"} />
+          </Form.Item>
+            <Button type="primary" htmlType="submit">
+              Đăng nhập
+            </Button>
+            <div style={{ paddingTop: "50px" }} />
+          <Link to={"/"}>
+            <Button type="link" >
+             Đăng ký tài khoản mới ?
             </Button>
           </Link>
         </Form>
@@ -70,4 +69,4 @@ const PhoneNumber = () => {
   );
 };
 
-export default PhoneNumber;
+export default Login;
