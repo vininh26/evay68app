@@ -54,9 +54,11 @@ const Login = () => {
           <Form.Item name="passworld" label="Mật khẩu">
             <Input placeholder="Nhập passworld" type={"password"} />
           </Form.Item>
+          <Link to={"/dashboard"}>
             <Button type="primary" htmlType="submit">
               Đăng nhập
             </Button>
+            </Link>
             <div style={{ paddingTop: "50px" }} />
           <Link to={"/"}>
             <Button type="link" >

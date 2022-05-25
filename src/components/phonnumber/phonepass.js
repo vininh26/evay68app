@@ -1,6 +1,7 @@
 import { LeftOutlined, PlayCircleFilled } from "@ant-design/icons";
 import { Breadcrumb, Button, Col, Form, Image, Input, Row } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 import sd from "./sd.jpg";
 
 const PhonePassPage = () => {
@@ -55,9 +56,12 @@ const PhonePassPage = () => {
             <Form.Item name="passone" label="Nhập lại mật khẩu">
               <Input placeholder="Nhập lại mật khẩu" />
             </Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Link to={"/login"}>
+              <Button type="primary" htmlType="submit">
               Xác nhận
             </Button>
+            </Link>
+             
             <article nz-typography>
               <h1 nz-typography>Chú ý</h1>
               <p nz-typography>

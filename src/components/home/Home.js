@@ -1,5 +1,5 @@
 import React from 'react'
-import { AndroidOutlined, AppleOutlined } from '@ant-design/icons';
+import { AndroidOutlined, AppleOutlined, CreditCardOutlined, CustomerServiceOutlined, PayCircleOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { Tabs } from 'antd';
 import Contact from './contact/Contact';
 import Loan from './loan/Loan';
@@ -13,10 +13,10 @@ const Home = () => {
     <Tabs centered style={{textAlign:"center"}}   size='large' tabPosition='bottom' defaultActiveKey="1">
     <TabPane
       tab={
-        <span>
-          <AppleOutlined />
+        <h3>
+          <PayCircleOutlined />
           Vay
-        </span>
+        </h3>
       }
       key="1"
     >
@@ -25,10 +25,10 @@ const Home = () => {
     </TabPane>
     <TabPane
       tab={
-        <span>
-          <AndroidOutlined />
+        <h3>
+          <CustomerServiceOutlined />
           Liên hệ
-        </span>
+        </h3>
       }
       key="2"
     >
@@ -37,10 +37,10 @@ const Home = () => {
     </TabPane>
     <TabPane
       tab={
-        <span>
-          <AndroidOutlined />
+        <h3>
+          <CreditCardOutlined />
           Ví tiền
-        </span>
+        </h3>
       }
       key="3"
     >
@@ -49,10 +49,10 @@ const Home = () => {
     </TabPane>
     <TabPane
       tab={
-        <span>
-          <AndroidOutlined />
+        <h3>
+         <UserDeleteOutlined />
           Hồ sơ
-        </span>
+        </h3>
       }
       key="4"
     >
